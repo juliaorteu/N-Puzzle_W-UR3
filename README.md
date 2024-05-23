@@ -8,9 +8,8 @@ This repository implements tasks for a UR3/UR3e robot manipulator to solve an N-
 - Elena Alegret, Estevan Gatein, Asal Mehrabi and Júlia Orteu
 
 #### Course Information
-Grado en Inteligencia Artificial (GIA)  
-Robótica Avançada - UPC
-
+Robótica Avançada 
+Grado en Inteligencia Artificial (GIA) - UPC
 
 ## Run the problems
 
