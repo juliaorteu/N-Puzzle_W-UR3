@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Config>
+    <Problemfiles>
+        <pddldomain name="ff-domains/puzzlemanipulationdomain.pddl" />
+        <pddlproblem name="ff-domains/manipulation_problem_puzzle" />
+        <kautham name="OMPL_RRT_puzzle.xml" />
+        <directory name="/demos/OMPL_geo_demos/puzzle/"/>
+        <graspit name =""/> <!--leave it empty if no graspit is to be used -->
+    </Problemfiles>
+    <States>
+        <!-- You can set a different instance of the problem by modifying the intial object poses-->
+        <!-- The Graspcontrols will be to be changed accordingly the new intial object poses-->
+        <!-- (be careful: if the objects change their initial room then also the pddl problem file has to be set accordingly) -->
+        <Initial>
+            <Object name="PAWNB1" kthname="pawnB1">  0.125 0 0.91 1 0 0 0</Object> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
+            <Object name="PAWNB2" kthname="pawnB2">  0 0.125 0.91 1 0 0 0</Object> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
+            <Robot name="ur3_robotniq_A" controlfile="controls/ur3_robotniq_1.cntr"> 0.8814166667 0.2733333333 0.6929722222 0.2829166667 0.2486388889 0.3822222222 0.538 </Robot>
+        </Initial>
+    </States>
+    <Actions>
+        <Pick robot="UR3A" object="PAWNB1" region="POS1">
+            <Rob> 0 </Rob> <!-- Index of the robot according to the order in the kautham problem file-->
+            <Obj> pawnB1 </Obj> <!-- Name of the object according to the urdf file included in the kautham problem file-->
+            <Link> 8 </Link> <!-- Index of the robot link -->
+            <Cont>controls/ur3_robotniq_1.cntr</Cont>
+            <Regioncontrols> 0.8552777778 0.3217777778 0.6787500000 0.2386944444 0.2603888889 0.3543055556 0.538 </Regioncontrols>
+            <!--Robot A picks object - Robot B at home configuration-->
+            <Graspcontrols grasp="topgrasp"> 0.8547500000 0.3435277778 0.6789722222 0.2314722222 0.2597500000 0.362388888 0.538 </Graspcontrols>
+            <!--Graspcontrols grasp="topgrasp"> 0.846 0.944 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols-->
+            <!--Pose>1.1 0 0.91 0 0 0 1</Pose-->
+        </Pick>
+        <Place robot="UR3A" object="PAWNB1" region="POS2">
+            <Rob> 0 </Rob>
+            <Obj> pawnB1 </Obj>
+            <Cont>controls/ur3_robotniq_1.cntr</Cont>
+	    <Regioncontrols> 0.8766388889 0.3640833333 0.6337222222 0.2275000000 0.2614444444 0.3798055556 0.538 </Regioncontrols>
+            <!--Robot A places object - Robot B at home configuration-->
+            <Graspcontrols grasp= "topgrasp">0.8775000000 0.3770277778 0.6336388889 0.2227222222 0.2585555556 0.3725277778 0.538 </Graspcontrols>
+            <!--Graspcontrols grasp="topgrasp"> 0.9 0.597 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols-->
+            <!--Poseregion>-0.95 -0.9 0.3 0.35  0.907 0.004158435855060816 0.014741266146302223 -0.9167522192001343 0.3991626501083374</Poseregion>
+            <Pose> -0.910 0.314 0.9071908593177795 0.004158435855060816 0.014741266146302223 -0.9167522192001343 0.3991626501083374</Pose-->
+        </Place>
+	<Pick robot="UR3A" object="PAWNB2" region="POS3">
+            <Rob> 0 </Rob> <!-- Index of the robot according to the order in the kautham problem file-->
+            <Obj> pawnB2 </Obj> <!-- Name of the object according to the urdf file included in the kautham problem file-->
+            <Link> 8 </Link> <!-- Index of the robot link -->
+            <Cont>controls/ur3_robotniq_1.cntr</Cont>
+            <Regioncontrols> 0.8770000000 0.2963333333 0.7238333333 0.2213611111 0.2580833333 0.3749444444 0.538 </Regioncontrols>
+            <!--Robot A picks object - Robot B at home configuration-->
+            <Graspcontrols grasp="topgrasp"> 0.8769166667 0.3173055556 0.7238055556 0.2126111111 0.2563611111 0.3752222222 0.538 </Graspcontrols>
+            <!--Graspcontrols grasp="topgrasp"> 0.846 0.944 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols-->
+            <!--Pose>1.1 0 0.91 0 0 0 1</Pose-->
+	</Pick>
+        <Place robot="UR3A" object="PAWNB2" region="POS1">
+            <Rob> 0 </Rob>
+            <Obj> pawnB2 </Obj>
+            <Cont>controls/ur3_robotniq_1.cntr</Cont>
+            <Regioncontrols> 0.8582777778 0.3289444444 0.6991388889 0.2141944444 0.2530277778 0.3525833333 0.538 </Regioncontrols>
+            <!--Robot A places object - Robot B at home configuration-->
+            <Graspcontrols grasp= "topgrasp"> 0.8582500000 0.3331666667 0.6991388889 0.2121388889 0.2530277778 0.3549166667 0.538 </Graspcontrols>
+            <!--Graspcontrols grasp="topgrasp"> 0.9 0.597 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols-->
+            <!--Poseregion>-0.95 -0.9 0.3 0.35  0.907 0.004158435855060816 0.014741266146302223 -0.9167522192001343 0.3991626501083374</Poseregion>
+            <Pose> -0.910 0.314 0.9071908593177795 0.004158435855060816 0.014741266146302223 -0.9167522192001343 0.3991626501083374</Pose-->
+        </Place>
+    </Actions>
+</Config>

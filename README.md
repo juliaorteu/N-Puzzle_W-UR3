@@ -52,7 +52,8 @@ Once kautham-gui is open, load the following configuration files:
 - taskfile_tampconfig_puzzle_X.xml
 Replace X with the planner you are using (RRT, RRTConnect, or PRM).
 
-## Directory Structure
+
+## Directory Structure
 
 ```
 .

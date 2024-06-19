@@ -1,0 +1,13 @@
+<Benchmark Name="experiment">
+<Problem File="OMPL_PRM_puzzle.xml"
+PlannerAlias="PRM"/>
+<Problem File="OMPL_RRT_puzzle.xml"
+PlannerAlias="RRT"/>
+<Problem File="OMPL_RRTconnect_puzzle.xml"
+PlannerAlias="RRT-connect"/>
+<Parameter Name="maxTime" Value="10.0" />
+<Parameter Name="maxMem" Value="8000.0" />
+<Parameter Name="runCount" Value="10" />
+<Parameter Name="displayProgress" Value="false" />
+<Parameter Name="filename" Value="result.log" />
+</Benchmark>
