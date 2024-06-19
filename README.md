@@ -12,6 +12,7 @@ This project implements tasks for a UR3/UR3e robot manipulator to solve an N-puz
 
 <p align="center">
   <img src="images/BehaviorTree.jpeg" alt="BehaviourTree" width="500">
+  Figure 1: Behaviour Tree
 </p>
 
 ## Run the PDDL problem
