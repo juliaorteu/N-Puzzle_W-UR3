@@ -1,0 +1,23 @@
+(define (problem manipulation_problem_puzzle)
+
+(:domain puzzlemanipulationdomain)
+
+(:objects
+    pos1 pos2 pos3 - location
+    pawnB1 pawnB2 - obstacle
+    ur3a - robot
+)
+
+(:init
+    (in pawnB1 pos1)
+    (in pawnB2 pos3)
+    (handEmpty ur3a)
+    (empty pos2)
+)
+
+(:goal
+(and
+    (in pawnB1 pos2)
+    (in pawnB2 pos1)
+))
+)

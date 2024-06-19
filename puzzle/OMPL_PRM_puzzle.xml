@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Problem name="OMPL_PRM_rob">
+<Obstacle obstacle="obstacles/chess/chessboard.urdf" scale="1.0">
+                <Home TH="1.570796327" WZ="1.0" WY="0.0" WX="0.0" Z="-0.02" Y="-0.50" X="0.0" />
+        </Obstacle>
+        <Obstacle obstacle="obstacles/chess/pawnB1.urdf" scale="1.0">
+                <Home TH="-1.570796327" WZ="1.0" WY="0.0" WX="0.0" Z="0.02" Y="-0.385" X="0.115" />
+        </Obstacle>
+        <Obstacle obstacle="obstacles/chess/pawnB2.urdf" scale="1.0">
+                <Home TH="-1.570796327" WZ="1.0" WY="0.0" WX="0.0" Z="0.02" Y="-0.385" X="0.185" />
+        </Obstacle>
+	<Robot robot="robots/ur3_robotniq_A.urdf" scale="1.0">
+		<Home TH="1.570796327" WZ="1.0" WY="0.0" WX="0.0" Z="-0.04" Y="0.0" X="0.37" />
+                <ViewLink name="tool0"/>
+	</Robot>
+	<!--Robot robot="robots/ur3_robotniq_B.urdf" scale="1.0">
+		<Home TH="-1.570796327" WZ="1.0" WY="0.0" WX="0.0" Z="-0.04" Y="0.0" X="-0.37" />
+                <ViewLink name="tool0"/>
+	</Robot-->
+	<Controls robot="controls/ur3_robotniq_1.cntr" />
+	<Planner>
+		<Parameters>
+			<Name>omplPRM</Name>
+			<Parameter name="MinGrowTime">0.2</Parameter>
+			<Parameter name="MinExpandTime">0.0</Parameter>
+			<Parameter name="_Max Planning Time">20</Parameter>
+			<Parameter name="BounceDistanceThreshold">0.0</Parameter>
+			<Parameter name="_Speed Factor">1</Parameter>
+			<Parameter name="DistanceThreshold">1.0</Parameter>
+
+		</Parameters>
+		
+		<Queries>
+			<Query>
+				<Init>0.8814166667 0.2733333333 0.6929722222 0.2829166667 0.2486388889 1.3822222222 0.538</Init>
+				<Goal>0.8814166667 0.2733333333 0.6929722222 0.2829166667 0.2486388889 1.3822222222 0.538</Goal>
+			</Query>
+		</Queries>
+	</Planner>
+</Problem>
