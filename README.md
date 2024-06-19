@@ -16,8 +16,8 @@ This project implements tasks for a UR3/UR3e robot manipulator to solve an N-puz
 <p align="center">
   Figure 1: Behaviour Tree
 </p>
-## Run the PDDL problem
 
+## Run the PDDL problem
 To run the pddl problems, use the following command:
 
 ```bash
@@ -26,7 +26,6 @@ $  ./ff -o domain.pddl -f problem.pddl > output.txt
 ```
 
 ## Running the Simulation
-
 #### Executing the launch
 
 To run the N-puzzle simulation with the UR3 robot, use the provided launch files. 
