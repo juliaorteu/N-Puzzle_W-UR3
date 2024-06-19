@@ -26,6 +26,7 @@ $  ./ff -o domain.pddl -f problem.pddl > output.txt
 ```
 
 ## Running the Simulation
+
 #### Executing the launch
 
 To run the N-puzzle simulation with the UR3 robot, use the provided launch files. 
