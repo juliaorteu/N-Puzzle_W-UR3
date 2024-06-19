@@ -5,12 +5,9 @@
 # N-Puzzle with UR3
 
 ## Authors
-- Elena Alegret
-- Esteban Gatein
-- Asal Mehrabi
-- Júlia Orteu
+- Elena Alegret, Esteban Gatein, Asal Mehrabi and Júlia Orteu
 
-## Project Description
+## Overview
 This project implements tasks for a UR3/UR3e robot manipulator to solve an N-puzzle, inspired by the 15-puzzle, using a visual drawing as the goal. The tasks are designed and simulated with PDDL (Planning Domain Definition Language) and the Kautham planning framework.
 
 ## Run the PDDL problem
