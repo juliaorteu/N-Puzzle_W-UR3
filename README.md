@@ -10,6 +10,9 @@
 ## Overview
 This project implements tasks for a UR3/UR3e robot manipulator to solve an N-puzzle, inspired by the 15-puzzle, using a visual drawing as the goal. The tasks are designed and simulated with PDDL (Planning Domain Definition Language) and the Kautham planning framework.
 
+<img src="images/BehaviourTree.jpeg" alt="BehaviourTree" width="150">
+
+
 ## Run the PDDL problem
 
 To run the pddl problems, use the following command:
