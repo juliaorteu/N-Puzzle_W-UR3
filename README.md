@@ -56,7 +56,7 @@ To run the benchmark planner, execute the commands
 $ sudo kautham-console -b bench.xml
 $ sudo python3 stats.py result.log -d results.db
 ```
-Interpret results at ![PlannerArena.org](https://plannerarena.org/):
+Interpret results at [PlannerArena.org](https://plannerarena.org/):
 - Solved: Percentatge problems solved.
 - Time: Avg. planning time.
 - Graph States: Avg. states explored.
